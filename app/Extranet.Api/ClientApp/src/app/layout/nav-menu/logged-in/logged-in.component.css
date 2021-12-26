@@ -1,0 +1,64 @@
+.logged-in
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 238px;
+}
+
+.profile:hover {
+    text-shadow: 0 0 .65px #f7ad02, 0 0 .65px #f7ad02;
+    color: #f7ad02;
+}
+
+.profile
+{
+    transition: text-shadow .2s;
+    text-decoration: none;
+}
+
+.profile_name::before {
+  content: url("../../../../images/login_icon.svg");
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: -8px;
+  left: -53px;
+}
+
+.profile_name
+{
+    transition: text-shadow .3s;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+    font-weight: 600;
+    color: #FDB100;
+    text-decoration: none;
+}
+
+  .profile_name::after
+  {
+    content: url("../../../../images/line.svg");
+    position: absolute;
+    top: 1px;
+    right: -33px;
+  }
+
+.profile_exit:hover
+{
+    box-shadow: 0 0 13px 2px #0000003d;
+    cursor: pointer;
+}
+
+.profile_exit
+{
+  content: url("../../../../images/logout_icon.svg");
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

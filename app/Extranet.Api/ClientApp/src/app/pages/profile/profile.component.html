@@ -1,0 +1,71 @@
+<div class="profile">
+  <a class="back" (click)="goBack()">Назад</a>
+  <div class="title">
+    <span class="title_text">Мой профиль</span>
+  </div>
+  <div class="user-data" [ngClass]="isEdit ? 'user-data_active' : 'user-data'">
+    <a class="edit" (click)="showEditing()"></a>
+    <div class="user-data_left-column">
+      <input class="user-data_input user-data_input_small"
+             [ngClass]="isEdit ? 'user-data_input_active' : 'user-data_input'"
+             placeholder="Имя"
+             type="text"
+             name="name"
+             [disabled]="!isEdit"
+             [(ngModel)]="author.name"
+             disabled>
+      <input class="user-data_input user-data_input_small"
+             [ngClass]="isEdit ? 'user-data_input_active' : 'user-data_input'"
+             placeholder="Логин"
+             type="text"
+             name="login"
+             [disabled]="!isEdit"
+             [(ngModel)]="author.login"
+             disabled>
+      <div class="password">
+        <input class="user-data_input user-data_input_small"
+               [ngClass]="isEdit ? 'user-data_input_active' : 'user-data_input'"
+               placeholder="Пароль"
+               type="password"
+               name="password"
+               [disabled]="!isEdit"
+               [(ngModel)]="author.password"
+               disabled>
+        <a class="password-invisible" *ngIf="!isVisible" (click)="showHidePassword()"></a>
+        <a class="password-visible" [ngClass]="isEdit ? 'password-visible_active' : 'password-visible'" *ngIf="isVisible" (click)="showHidePassword()"></a>
+      </div>
+      <a class="user-data_button" *ngIf="isEdit" (click)="saveEditing()">Сохранить</a>
+    </div>
+    <div class="user-data_right-column">
+      <textarea class="user-data_input user-data_input_big"
+                [ngClass]="isEdit ? 'user-data_input_big_active' : 'user-data_input_big'"
+                placeholder="Напишите немного о себе"
+                type="text"
+                name="description"
+                [disabled]="!isEdit"
+                [(ngModel)]="author.description">
+            </textarea>
+      <a class="user-data_button" *ngIf="isEdit" (click)="cancelEditing()">Отменить</a>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <span class="card_title">Всего рецептов</span>
+      <span class="card_number">{{recipesCount}}</span>
+    </div>
+    <div class="card">
+      <span class="card_title">Всего лайков</span>
+      <span class="card_number">{{likesCount}}</span>
+    </div>
+    <div class="card">
+      <span class="card_title">В избранных</span>
+      <span class="card_number">{{favoritesCount}}</span>
+    </div>
+  </div>
+  <div class="recipes">
+    <div class="recipes_title">
+      <span class="recipes_title_text">Мои рецепты</span>
+    </div>
+    <app-recipe-card class="recipe" *ngFor="let recipe of recipes" [card]="recipe" [displayLink]="true" [displayTitle]="true"></app-recipe-card>
+  </div>
+</div>

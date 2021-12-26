@@ -1,0 +1,10 @@
+<div class="favorites-page">
+  <div class="title">
+    <span class="title_text">Избранное</span>
+  </div>
+  <span class="empty" *ngIf="isEmpty">Ваш список пуст</span>
+  <div class="cards" *ngIf="!isEmpty">
+    <app-recipe-card class="card" *ngFor="let recipe of recipes" [card]="recipe" [displayTitle]="true" [displayLink]="true"></app-recipe-card>
+    <a *ngIf="canLoadMore" (click)="addMore()" class="cards_button">Загрузить еще</a>
+  </div>
+</div>

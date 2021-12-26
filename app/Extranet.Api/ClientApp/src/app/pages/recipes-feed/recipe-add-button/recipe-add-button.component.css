@@ -1,0 +1,42 @@
+.button:hover {
+  box-shadow: 0 0 1px 1px #FDB100;
+  background-color: #FFF;
+  color: #FDB100;
+}
+
+  .button:hover:before {
+    color: #FDB100;
+  }
+
+.button::before {
+  content: "+";
+  color: #FFF;
+  font-size: 34px;
+  font-weight: 300;
+  position: absolute;
+  top: 17px;
+  left: 14%;
+}
+
+.button {
+  box-shadow: 0 0 1px 1px #FDB100;
+  transition: .3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 82px;
+  padding-right: 42px;
+  background: #FDB100;
+  color: #FFF;
+  border: none;
+  position: relative;
+  height: 60px;
+  border-radius: 16px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+}

@@ -1,0 +1,81 @@
+.favorites-page {
+  min-height: 1200px;
+  width: 100%;
+  padding: 0;
+}
+
+.title {
+  height: 112px;
+  margin-top: 90px;
+}
+
+.title_text {
+  width: 811px;
+  height: 62px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 62px;
+  color: #25292D;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card {
+  display: block;
+  margin-bottom: 20px;
+  width: 1200px;
+  cursor: pointer;
+  border: none !important;
+}
+
+.empty {
+  display: block;
+  margin: 68px auto 0;
+  width: 556px;
+  height: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #FDB100;
+  opacity: 0.5;
+}
+
+.cards_button:hover {
+  box-shadow: 0 0 1px 1px #FDB100;
+  background: #FDB100;
+  color: #FFF;
+  border: none;
+}
+
+.cards_button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: .3s;
+  margin: 65px auto 0;
+  height: 60px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  width: 26%;
+  box-shadow: 0 0 1px 1px #FDB100;
+  background-color: #FFF;
+  color: #FDB100;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 108px;
+}

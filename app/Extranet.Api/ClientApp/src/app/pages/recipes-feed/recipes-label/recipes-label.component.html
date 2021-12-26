@@ -1,0 +1,4 @@
+<div class="cards">
+  <app-recipe-card class="card" *ngFor="let card of cards" [displayTitle]="true" [displayLink]="true" [card]="card"></app-recipe-card>
+  <a *ngIf="canLoadMore" (click)="addMore()" class="cards_button">Загрузить еще</a>
+</div>

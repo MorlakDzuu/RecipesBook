@@ -1,0 +1,164 @@
+.popup-registration {
+  width: 700px;
+  height: 563px;
+  background: #FFF;
+  padding: 60px 60px;
+  box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+  border-radius: 24px;
+  position: relative;
+}
+
+.exit::before {
+  content: url("../../../images/cross.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.exit {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  right: 17px;
+  top: 21px;
+}
+
+.popup-registration_title {
+  display: block;
+  width: 515px;
+  height: 30px;
+  margin-bottom: 27px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #25292D;
+}
+
+.popup-registration_input:focus::placeholder {
+  transform: translate(0px, -17px);
+  font-size: 11px;
+  color: #FDB100;
+}
+
+.popup-registration_input:hover {
+  border: 1px solid #FDB100;
+}
+
+.popup-registration_input:focus {
+  border: 1px solid #FDB100;
+}
+
+.popup-registration_input {
+  transition: .3s;
+  margin-top: 20px;
+  height: 50px;
+  padding: 11px 0 11px 26px;
+  border: 1px solid rgba(145, 150, 161, 0.4);
+  box-sizing: border-box;
+  border-radius: 16px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(37, 41, 45, 0.5);
+  outline: none;
+}
+
+.popup-registration_input_big {
+  width: 580px;
+}
+
+.popup-registration_input_small {
+  width: 278px;
+}
+
+.inputs-small {
+  display: flex;
+  flex-direction: row;
+  width: 580px;
+  justify-content: space-between;
+}
+
+.popup-registration_hint {
+  display: block;
+  margin-bottom: 20px;
+  width: 276px;
+  height: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  align-items: center;
+  color: rgba(37, 41, 45, 0.3);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  width: 580px;
+  justify-content: space-between;
+}
+
+.popup-registration_button {
+  width: 278px;
+  height: 60px;
+  border-radius: 16px;
+  justify-content: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.popup-registration_button_registration:hover {
+  background-color: white;
+  border: 1px solid #FDB100;
+  box-sizing: border-box;
+  color: #FDB100;
+}
+
+.popup-registration_button_registration {
+  transition: .3s;
+  background: #FDB100;
+  border: none;
+  color: #FFFFFF;
+}
+
+.popup-registration_button_cancel:hover {
+  background: rgb(253, 137, 0, 0.9);
+  border: none;
+  color: #FFFFFF;
+}
+
+.popup-registration_button_cancel {
+  transition: .3s;
+  background-color: white;
+  border: 1px solid #FDB100;
+  box-sizing: border-box;
+  color: #FDB100;
+}
+
+.popup-registration_text {
+  display: block;
+  margin: 0 auto;
+  width: 243px;
+  height: 26px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FDB100;
+  border-bottom: 1px dashed #FDB100;
+  cursor: pointer;
+}

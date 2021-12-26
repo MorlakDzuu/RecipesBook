@@ -1,0 +1,14 @@
+<div class="recipes-page">
+  <div class="title">
+    <span class="title_recipe">Рецепты</span>
+    <app-recipe-add-button></app-recipe-add-button>
+  </div>
+  <app-recipes-sorting-by-tags></app-recipes-sorting-by-tags>
+  <div class="search_recipes">
+    <span class="search_title">Поиск рецепта</span>
+    <div class="search_input">
+      <app-search></app-search>
+    </div>
+  </div>
+  <app-recipes-label [searchString]="searchString"></app-recipes-label>
+</div>

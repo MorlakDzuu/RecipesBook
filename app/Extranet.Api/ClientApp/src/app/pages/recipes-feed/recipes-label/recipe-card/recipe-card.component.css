@@ -1,0 +1,266 @@
+.card:hover {
+  box-shadow: 0 0 20px 4px #0000003d;
+  cursor: pointer;
+}
+
+.card {
+  text-decoration: none;
+  transition: .3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 430px;
+  border: none !important;
+  border-radius: 77px 24px 24px 0;
+  box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+  position: relative;
+  background-color: white;
+  box-sizing: content-box;
+}
+
+.card_image {
+  width: 430px;
+  height: 430px;
+  border-radius: 72px 0px;
+}
+
+.card_author {
+  position: absolute;
+  left: 0;
+  bottom: 37px;
+  height: 32px;
+  padding: 0 15px;
+  background-color: #FFF;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FDB100;
+  border-radius: 0 5px 5px 0;
+  text-decoration: none;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 36px;
+  margin-left: 49px;
+  margin-right: 30px;
+  margin-bottom: 65px;
+  width: 687px;
+  height: 379px;
+}
+
+.additional_features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 23px;
+  background: rgba(253,177,0,0.2);
+  border-radius: 5px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #F29E1F;
+  padding: 0 7%;
+  margin-right: 3%;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 229px;
+} 
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 107px;
+  height: 50px;
+  border: 1px solid #FDB100;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #FFF;
+  position: relative;
+  cursor: pointer;
+}
+
+.item_text {
+  display: block;
+  width: 19px;
+  height: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #FDB100;
+  margin-left: 9%;
+}
+
+.card_title_block {
+  margin-top: 37px;
+}
+
+.card_title {
+  width: 693px;
+  height: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #25292D;
+}
+
+.card_text {
+  width: 571px;
+  height: 95px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #4A525A;
+  margin-top: 14px;
+}
+
+.intelligence {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  height: 60px;
+  margin-top: 40px;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.chapter_timer::before {
+  content: url("../../../../../images/timer_icon.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chapter_timer {
+  width: 47%;
+}
+
+.chapter_text {
+  width: 168px;
+  height: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: #25292D;
+  opacity: 0.5;
+}
+
+.chapter_timer_text {
+  margin: 3px 0 0 28%;
+}
+
+.chapter_number {
+  height: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #25292D;
+  white-space: nowrap;
+}
+
+.chapter_number_timer {
+  width: 61px;
+  margin: -4px 0 0 28%;
+}
+
+.chapter_persons::before {
+  content: url("../../../../../images/persons_icon.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  left: 2px;
+}
+
+.chapter_persons {
+  width: 41%;
+}
+
+.chapter_persons_text {
+  margin: 4px 0 0 37%;
+}
+
+.chapter_number_persons {
+  width: 75px;
+  margin: -4px 0 0 37%;
+}
+
+.recipe-link::before {
+  
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: -8px;
+  left: -47px;
+}
+
+.recipe-link:hover {
+  text-shadow: 0 0 .65px #f7ad02, 0 0 .65px #f7ad02;
+  color: #f7ad02;
+}
+
+.recipe-link {
+  margin-top: 21px;
+  margin-left: 549px;
+  transition: text-shadow .3s;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  /* width: 60px; */
+  font-weight: 600;
+  color: #FDB100;
+  text-decoration: none;
+  cursor: pointer;
+}

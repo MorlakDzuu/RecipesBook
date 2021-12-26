@@ -1,0 +1,7 @@
+<div class="search">
+  <input id="seacrhInput" class="search_input" placeholder="Название блюда...">
+  <a (click)="search()" class="search_button">Поиск</a>
+  <div class="tags">
+    <a href="#" class="tag" *ngFor="let tag of tags">{{tag}}</a>
+  </div>
+</div>  

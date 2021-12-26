@@ -1,0 +1,15 @@
+<div class="popup-authorization">
+  <a mat-dialog-close class="exit"></a>
+  <span class="popup-authorization_title">Войти</span>
+  <input class="popup-authorization_input" placeholder="Логин" type="text" name="login" [(ngModel)]="userLogin.login" autocomplete="off">
+  <input class="popup-authorization_input" placeholder="Пароль" type="password" name="password" [(ngModel)]="userLogin.password" autocomplete="off">
+  <div class="buttons">
+    <button mat-dialog-close (click)="authorize()" class="popup-authorization_button popup-authorization_button_authorization">
+      Войти
+    </button>
+    <button mat-dialog-close class="popup-authorization_button popup-authorization_button_cancel">
+      Отмена
+    </button>
+  </div>
+  <a mat-dialog-close (click)="openRegistration()" class="popup-authorization_text">У меня еще нет аккаунта</a>
+</div>

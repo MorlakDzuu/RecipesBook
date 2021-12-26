@@ -1,0 +1,48 @@
+<div class="card">
+  <a routerLink="/recipe/{{card.id}}" *ngIf="displayLink">
+    <img class="card_image" src="{{card.photoUrl}}" alt="recipe" />
+  </a>
+  <img class="card_image" *ngIf="!displayLink" src="{{card.photoUrl}}" alt="recipe" />
+  <a class="card_author">@{{card.authorLogin}}</a>
+  <div class="card_content">
+    <div class="additional_features">
+      <div class="tags">
+        <a class="tag" *ngFor="let tag of card.tags">{{tag}}</a>
+      </div>
+      <div class="items">
+        <a class="item item_favorite" (click)="selectFavourite()">
+          <img class="item_image" *ngIf="!card.isFavorite" src="images/star.svg" alt="star" />
+          <img class="item_image" *ngIf="card.isFavorite" src="images/star_full.svg" alt="star" />
+          <span class="item_text">{{card.favoritesCount}}</span>
+        </a>
+        <a class="item item_like" (click)="selectLiked()">
+          <img class="item_image" *ngIf="!card.isLiked" src="images/like_orange.svg" alt="heart" />
+          <img class="item_image" *ngIf="card.isLiked" src="images/like_red.svg" alt="heart" />
+          <span class="item_text">{{card.likesCount}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="card_title_block">
+      <span class="card_title" *ngIf="displayTitle">{{card.title}}</span>
+    </div>
+    <span class="card_text">{{card.description}}</span>
+    <div class="intelligence">
+      <div class="chapter chapter_timer">
+        <span class="chapter_text chapter_timer_text">
+          Время приготовления:
+        </span>
+        <span class="chapter_number chapter_number_timer">
+          {{card.cookingDuration}} минут
+        </span>
+      </div>
+      <div class="chapter chapter_persons">
+        <span class="chapter_text chapter_persons_text">
+          Рецепт на:
+        </span>
+        <span class="chapter_number chapter_number_persons">
+          {{card.portionsCount}} персон
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

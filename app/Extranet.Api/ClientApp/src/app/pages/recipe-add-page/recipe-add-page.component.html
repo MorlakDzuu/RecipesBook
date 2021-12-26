@@ -1,0 +1,104 @@
+<div class="adding-recipe">
+  <a class="back" (click)="goBack()">Назад</a>
+  <div class="title">
+    <span class="title_text" *ngIf="!isEditMode">Добавить новый рецепт</span>
+    <span class="title_text" *ngIf="isEditMode">Редактирование рецепта</span>
+    <a class="title_button" (click)="send()" *ngIf="!isEditMode">Опубликовать</a>
+    <a class="title_button" (click)="send()" *ngIf="isEditMode">Изменить</a>
+  </div>
+  <div class="recipe">
+    <div *ngIf="!isImageLoaded" class="recipe_photo">
+      <div class="recipe_box">
+        <input type="file" (change)="onChange($event)" />
+      </div>
+    </div>
+    <img *ngIf="isImageLoaded" class="card_image" src="{{recipe.photoUrl}}" />
+    <div class="description">
+      <input class="description_input description_input_big"
+             placeholder="Название рецепта"
+             type="text"
+             name="name"
+             [(ngModel)]="recipe.title"
+             autocomplete="off" />
+      <textarea class="description_input description_input_big  description_input_text"
+                placeholder="Краткое описание рецепта (150 символов)"
+                maxlength="150"
+                type="text"
+                name="description"
+                [(ngModel)]="recipe.description"
+                autocomplete="off">
+            </textarea>
+      <div class="description_block description_input_big">
+        <mat-chip-list #chipList aria-label="Tags selection">
+          <mat-chip *ngFor="let tag of recipe.tags"
+                    [selectable]="selectable"
+                    [removable]="removable"
+                    (removed)="removeTag(tag)">
+            {{tag}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Добавить теги"
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 (matChipInputTokenEnd)="addTag($event)" class="tagInput"/>
+        </mat-chip-list>
+      </div>
+      <div class="description_numbers">
+        <div class="description_numbers_number">
+          <input class="description_input description_input_small"
+                 placeholder="Время готовки"
+                 type="text"
+                 name="time"
+                 [(ngModel)]="recipe.cookingDuration"
+                 autocomplete="off" />
+          <label class="description_text description_text_time">Минут</label>
+        </div>
+        <div class="description_numbers_number">
+          <input class="description_input description_input_small"
+                 placeholder="Порций в блюде"
+                 type="text"
+                 name="persons"
+                 [(ngModel)]="recipe.portionsCount"
+                 autocomplete="off" />
+          <label class="description_text">Персон</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-container">
+    <div class="ingredients">
+      <span class="ingredients_title">Ингредиенты</span>
+      <div class="ingredients_block" *ngFor="let ingredient of recipe.ingredients let i = index">
+        <a class="exit exit_ingredient" (click)="deleteTitle(i)"></a>
+        <input class="ingredients_input"
+               placeholder="Заголовок для ингредиентов"
+               type="text"
+               name="title"
+               [(ngModel)]="ingredient.title"
+               autocomplete="off" />
+        <textarea class="ingredients_input ingredients_input_big"
+               placeholder="Список продуктов для категории"
+               type="text"
+               name="ingredients"
+               [(ngModel)]="ingredient.description"
+               autocomplete="off">
+         </textarea>
+      </div>
+      <a class="add_button" (click)="addTitle()">Добавить заголовок</a>
+    </div>
+    <div class="steps">
+      <div class="step" *ngFor="let stage of recipe.stages; let i = index">
+        <a class="exit exit_step" (click)="deleteStage(i)"></a>
+        <span class="step_header">Шаг {{i+1}}</span>
+        <textarea class="step_input"
+                  placeholder="Описание шага"
+                  type="text"
+                  name="ingredients"
+                  [(ngModel)]="stage.description"
+                  autocomplete="off">
+                </textarea>
+      </div>
+      <a class="add_button add_button_margin-auto" (click)="addStage()">Добавить шаг</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="home_page">
+    <img alt="" class="image-background" />
+    <div class="slogan">
+        <div class="slogan_content">
+            <span class="slogan_content_title">
+                Готовь и делись рецептами
+            </span>
+            <span class="slogan_content_statement">
+                Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.
+            </span>
+            <div class="slogan_buttons">
+                <a (click)="addRecipe()" class="button button_recipe">
+                    Добавить рецепт
+                </a>
+                <a href="#" class="button button_login">
+                    Войти
+                </a>
+            </div>
+        </div>
+    </div>
+    <sorting-by-tags></sorting-by-tags>
+    <recipe-of-day></recipe-of-day>
+    <div class="search">
+        <span class="search_title">Поиск рецептов</span>
+        <span class="search_text">
+            Введите примерное название блюда, а мы по тегам найдем его
+        </span>
+        <div class="search_content">
+            <search-recipes></search-recipes>
+        </div>
+    </div>
+</div>

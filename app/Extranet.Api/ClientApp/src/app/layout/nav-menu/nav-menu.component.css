@@ -1,0 +1,73 @@
+.header
+{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 44px 8.4% 0px;
+    justify-content: space-between;
+}
+
+.navigation
+{
+    display: flex; 
+    width: 43.5%;
+    justify-content: space-between;
+}
+
+.title
+{
+    display: block;
+    width: 99px;
+    height: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FDB100;
+    margin-right: 8%;
+}
+
+.item:hover {
+    text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333;
+    color: #3A3C41;
+}
+
+.item {
+    transition: text-shadow .3s;
+    display: block;
+    margin-top: 4px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #9196A1;
+    background: none;
+    border: none;
+    transition: linear 0.3s;
+    text-decoration: none;
+}
+
+.active 
+{
+    text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333;
+    color: #3A3C41;
+}
+
+.item_home
+{
+    width: 76px;
+}
+
+.item_recipe
+{
+    width: 82px;
+}
+
+.item_favorites
+{
+    width: 106px;
+}

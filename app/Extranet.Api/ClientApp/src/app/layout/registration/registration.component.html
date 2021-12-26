@@ -1,0 +1,20 @@
+<div class="popup-registration">
+  <a mat-dialog-close class="exit"></a>
+  <span class="popup-registration_title">Регистрация</span>
+  <input class="popup-registration_input popup-registration_input_big" placeholder="Имя" type="text" name="name"  [(ngModel)]="userRegister.name" autocomplete="off">
+  <input class="popup-registration_input popup-registration_input_big" placeholder="Логин" type="text" name="login" [(ngModel)]="userRegister.login" autocomplete="off">
+  <div class="inputs-small">
+    <input class="popup-registration_input popup-registration_input_small" placeholder="Пароль" type="password" name="password" [(ngModel)]="userRegister.password" autocomplete="off">
+    <input class="popup-registration_input popup-registration_input_small" placeholder="Повторите пароль" type="password" name="password" [(ngModel)]="repeatedPassword" autocomplete="off">
+  </div>
+  <span class="popup-registration_hint">Минимум 8 символов</span>
+  <div class="buttons">
+    <button mat-dialog-close class="popup-registration_button popup-registration_button_registration" (click)="register()">
+      Зарегистрироваться
+    </button>
+    <button mat-dialog-close class="popup-registration_button popup-registration_button_cancel">
+      Отмена
+    </button>
+  </div>
+  <a mat-dialog-close (click)="openAuthorization()" class="popup-registration_text">У меня уже есть аккаунт</a>
+</div>

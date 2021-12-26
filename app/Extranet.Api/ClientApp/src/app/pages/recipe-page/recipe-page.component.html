@@ -1,0 +1,24 @@
+<div class="recipe">
+  <a class="back" (click)="goBack()">Назад</a>
+  <div class="title">
+    <span class="title_text">{{recipe.title}}</span>
+    <div class="buttons" *ngIf="isMyRecipe">
+      <a class="title_button title_button_delete" (click)="delete()"></a>
+      <a routerLink="/recipe/edit/{{recipeId}}" class="title_button title_button_edit">Редактировать</a>
+    </div>
+  </div>
+  <app-recipe-card class="card" [card]="recipeCard" [displayTitle]="false" [displayLink]="false"></app-recipe-card>
+  <div class="recipe-container">
+    <div class="ingredients">
+      <span class="ingredients_header">Ингридиенты</span>
+      <div class="ingredients_block" *ngFor="let ingredient of recipe.ingredients">
+        <span class="ingredients_title">{{ingredient.title}}</span>
+        <span class="ingredients_ingredient">{{ingredient.description}}</span>
+      </div>
+    </div>
+    <div class="stages">
+      <app-step class="stage" *ngFor="let stage of recipe.stages" [stage]="stage"></app-step>
+      <span class="stages_footer">Приятного аппетита!</span>
+    </div>
+  </div>
+</div>  

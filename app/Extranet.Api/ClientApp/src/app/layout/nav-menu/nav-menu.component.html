@@ -1,0 +1,11 @@
+<div class="header">
+    <div class="navigation">
+        <span class="title">Recipes</span>
+        <a href="#" class="item_home item" routerLink="/" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Главная</a>
+        <a href="#" class="item_recipe item" routerLink="/recipes" routerLinkActive="active">Рецепты</a>
+        <a href="#" class="item_favorites item" routerLink="/favorites" routerLinkActive="active">Избранное</a>
+    </div>
+    <login-button (click)="toggleLoginStatus(this.isLogIn)" *ngIf="!isLogIn"></login-button>
+    <logged-in *ngIf="isLogIn" (myEvent)="toggleLoginStatus($event)"></logged-in>
+</div>
